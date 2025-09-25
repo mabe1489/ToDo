@@ -13,4 +13,4 @@ for _ in range(10):
     for todo in todos:
         print(f"- {todo}")
 
-print("Ente Gelende")
+print("Ente Gelente")
