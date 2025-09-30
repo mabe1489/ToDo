@@ -6,7 +6,7 @@ import time
 
 #Lists
 todos = []
-# Speichern in einer .txt-Datei
+# Speichern in einer .json-Datei
 def saveList(values):
 
     with open("SavedToDos.json", 'w') as f:
@@ -18,6 +18,8 @@ def saveList(values):
 with open("SavedToDos.json", 'r') as f:
     todos = json.load(f)
 
+
+#list can be written or deleted
 def listToDos(todos):
     #Adding or removing ToDo
         for _ in range(100000):
@@ -39,8 +41,9 @@ def listToDos(todos):
                 else:
                     todos.append(newitem)
                     saveList(todos)
-            
 
+
+# menu for help, going to listToDos() and exit
 def menu(todos):
     print("Menü")
     help = input("Für Hilfe (1), sonst (0): ")
@@ -54,11 +57,11 @@ def menu(todos):
     if int(help) == 0:
 
         inlist = input("In die Liste gehen (2), sonst 'exit': ")
-        if int(inlist) == 2:
+        if inlist == str(2):
             listToDos(todos)
             
 
-        if str(inlist) == "exit": 
+        if inlist == "exit": 
                 
             print("")
             print("Ende Gelände")
