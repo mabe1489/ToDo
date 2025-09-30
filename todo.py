@@ -61,6 +61,7 @@ def menu(todos):
             listToDos(todos)
             
 
+
         if inlist == "exit": 
                 
             print("")
